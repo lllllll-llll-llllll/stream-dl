@@ -1,5 +1,7 @@
 autoit tool to download vods from popular streaming websites
 
+i know it seems since youtube-dl already exists. but i don't like python and they have a whole lot of junk websites. focusing on streaming websites like twitch, periscope, ok.ru, is more useful i think
+
 requirements:
   windows operating system
   autoit3
