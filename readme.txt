@@ -10,4 +10,4 @@ usage:
 	exe: stream-dl.exe <URL> <OUTPUT>
 
 note:
-	<URL> is the full url that you see in the browser address bar, eg "https://www.periscope.tv/w/skghkasdhgjsd"
+	<URL> is the full url visible in the address bar, eg "https://www.periscope.tv/w/skghkasdhgjsd"
