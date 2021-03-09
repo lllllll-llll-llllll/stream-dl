@@ -1,6 +1,6 @@
 autoit tool to download vods from popular streaming websites
 
-requires:
+requirements:
   windows
   autoit3
   ffmpeg
