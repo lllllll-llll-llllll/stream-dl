@@ -6,8 +6,8 @@ requires:
 	curl
 
 usage:
-	au3: AutoIt3.exe stream-dl.au3 <URL INPUT> <OUTPUT>
-	exe: stream-dl.exe <URL INPUT> <OUTPUT>
+	au3: AutoIt3.exe stream-dl.au3 <URL> <OUTPUT>
+	exe: stream-dl.exe <URL> <OUTPUT>
 
 note:
-	<URL INPUT> is the full url, eg "https://www.periscope.tv/w/skghkasdhgjsd"
+	<URL> is the full url that you see in the browser address bar, eg "https://www.periscope.tv/w/skghkasdhgjsd"
