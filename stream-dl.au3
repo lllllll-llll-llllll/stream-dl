@@ -1,7 +1,7 @@
 #include <Array.au3>
 
-global $input = ''		;full url input
-global $output = ''		;full filename output
+global $input = ''	;full url input
+global $output = ''	;full filename output
 global $website = ''	;simplified name of website
 
 $input  = $CmdLine[1]
