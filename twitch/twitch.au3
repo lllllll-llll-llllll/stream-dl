@@ -53,7 +53,6 @@ func twitch()
 		$mp4 = $mp4[2]
 
 		$c ='curl -g -o "' & $output & '" "' & $mp4 & '?sig=' & $sig & '&token={\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"\",\"device_id\":\"undefined\",\"expires\":' & $exp & ',\"user_id\":\"\",\"version\":2}"'
-		clipput($c)
 		runwait(@ComSpec & " /c " & $c, "", @SW_HIDE)
 
 		;cleanup
@@ -91,7 +90,6 @@ func twitch()
 		;download m3u8
 		$m3u8 = filereadline('m3u', 5)
 		$c = 'ffmpeg -y -i "' & $m3u8 & '" -c copy -bsf:a aac_adtstoasc "' & $output & '"'
-		clipput($c)
 		runwait(@ComSpec & " /c " & $c, "", @SW_HIDE)
 
 
