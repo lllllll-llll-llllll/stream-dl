@@ -1,7 +1,7 @@
 func periscope()
 	$id = ''		;broadcast id from url
 	$json = ''		;json request
-	$m3u8 = ''		;
+	$m3u8 = ''		;final url to download
 	$c = ''			;temp cmdline variable
 
 	;get json
