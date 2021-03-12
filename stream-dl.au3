@@ -1,61 +1,44 @@
 #include <Array.au3>
 
-$input  = $CmdLine[1] ;url
-$output = $CmdLine[2] ;filename for saved video
+global $input = ''		;full url input
+global $output = ''		;full filename output
+global $website = ''	;simplified name of website
 
-$split = stringsplit($input, '/', 2)
-$website = $split[2]
+$input  = $CmdLine[1]
+$output = $CmdLine[2]
 
-$script = ''
+$website = stringsplit($input, '/', 2)
+$website = $website[2]
+
 
 switch $website
 	case 'www.pscp.tv', 'www.periscope.tv'
-		$script = 'AutoIt3.exe ' & @scriptdir & '\periscope\periscope.au3 ' & $input
+		periscope()
 
-	case 'vimeo.com'
-		$script = 'AutoIt3.exe ' & @scriptdir & '\vimeo\vimeo.au3 ' & $input
+	case 'vimeo.com', 'www.vimeo.com'
+		vimeo()
+
+	case 'twitch.tv', 'www.twitch.tv'
+		twitch()
 
 endswitch
 
-runwait(@ComSpec & " /c " & $script, "", @SW_HIDE)
 
-select
-	case fileexists('m3u8')
-		m3u8()
 
-	case fileexists('mp4')
-		mp4()
-
-	case fileexists('m4s')
-		m4s()
-endselect
+#include "periscope\periscope.au3"
+#include "twitch\twitch.au3"
+#include "vimeo\vimeo.au3"
 
 
 
 
-;downloaders
-
-func m4s()
-	;join video files, add audio
-
-endfunc
 
 
-func m3u8()
-	$url = fileread('m3u8')
-	filedelete('m3u8')
-	$command = 'ffmpeg -i "' & $url & '" -c copy -bsf:a aac_adtstoasc "' & $output & '"'
-	runwait(@ComSpec & " /c " & $command, "", @SW_HIDE)
-
-endfunc
 
 
-func mp4()
-	$url = fileread('mp4')
-	filedelete('mp4')
-	$command = 'curl -o "' & $output & '" "' & $url
-	runwait(@ComSpec & " /c " & $command, "", @SW_HIDE)
-endfunc
+
+
+
 
 
 
