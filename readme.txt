@@ -6,6 +6,9 @@ requires:
   ffmpeg
   curl
 
-usage:
-  autoit3.exe stream-dl.au3 https://vimeo.com/502163294 vimeo.mp4
-  autoit3.exe stream-dl.au3 <full url of video> <video filename output>
+tests:
+  autoit3 stream-dl.au3 https://www.pscp.tv/WhiteHouse/1vOxwEPwDrmGB periscope.mp4
+  autoit3 stream-dl.au3 https://www.twitch.tv/paymoneywubby/clip/TenuousSucculentPancakeTheThing-F2_FJ5U01XaoCLOr twitch-clip.mp4
+  autoit3 stream-dl.au3 https://www.twitch.tv/videos/887056377 twitch-vod.mp4
+  autoit3 stream-dl.au3 https://vimeo.com/502163294 vimeo.mp4
+
