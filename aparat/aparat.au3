@@ -4,7 +4,7 @@ func aparat()
 	$c = ''		;
 
 	;download html
-	$c = 'curl -o "html" "https://www.aparat.com/v/xoIb5" -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"'
+	$c = 'curl -o "html" "' & $input & '" -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"'
 	runwait(@ComSpec & " /c " & $c, "", @SW_HIDE)
 
 	;scrape video url
