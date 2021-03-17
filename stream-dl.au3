@@ -2,7 +2,7 @@
 
 global $input = ''		;full url input
 global $output = ''		;full filename output
-global $website = ''	;simplified name of website
+global $website = ''		;simplified name of website
 
 $input  = $CmdLine[1]
 $output = $CmdLine[2]
