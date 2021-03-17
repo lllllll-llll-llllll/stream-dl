@@ -7,7 +7,7 @@ func periscope()
 	;get json
 	$id = stringsplit($input, '/', 3)
 	$id = $id[ubound($id)-1]
-	$c = 'curl -o "json" "https://api.periscope.tv/api/v2/accessVideoPublic?broadcast_id=' & $id & '&replay_redirect=false" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0" -H "Accept: */*" -H "Accept-Language: en-US,en;q=0.5" -H "Referer: https://www.periscope.tv/w/' & $id & '" -H "X-Attempt: 1" -H "Origin: https://www.periscope.tv" -H "DNT: 1" -H "Connection: keep-alive" -H "Pragma: no-cache" -H "Cache-Control: no-cache"'
+	$c = 'curl -o "json" "https://api.periscope.tv/api/v2/accessVideoPublic?broadcast_id=' & $id & '&replay_redirect=false" -H "Accept: */*"'
 	runwait(@ComSpec & " /c " & $c, "", @SW_HIDE)
 
 
