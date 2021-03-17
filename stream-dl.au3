@@ -31,10 +31,10 @@ switch $website
 
 endswitch
 
-#include "aparat\aparat.au3"
-#include "facebook\facebook.au3"
-#include "periscope\periscope.au3"
-#include "twitch\twitch.au3"
-#include "vimeo\vimeo.au3"
+#include "websites\aparat.au3"
+#include "websites\facebook.au3"
+#include "websites\periscope.au3"
+#include "websites\twitch.au3"
+#include "websites\vimeo.au3"
 
 
