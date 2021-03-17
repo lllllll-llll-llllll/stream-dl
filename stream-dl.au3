@@ -10,9 +10,6 @@ $output = $CmdLine[2]
 $website = stringsplit($input, '/', 2)
 $website = $website[2]
 
-
-
-
 switch $website
 	case 'www.aparat.com', 'aparat.com'
 		aparat()
