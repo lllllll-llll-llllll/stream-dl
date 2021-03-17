@@ -20,7 +20,7 @@ switch $website
 	case 'www.facebook.com', 'facebook.com'
 		facebook()
 
-	case 'periscope.tv', 'pscp.tv', 'www.periscope.tv', 'www.pscp.tv',
+	case 'periscope.tv', 'pscp.tv', 'www.periscope.tv', 'www.pscp.tv'
 		periscope()
 	
 	case 'rumble.com', 'www.rumble.com'
