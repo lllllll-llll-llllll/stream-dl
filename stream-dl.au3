@@ -22,18 +22,21 @@ switch $website
 
 	case 'periscope.tv', 'pscp.tv', 'www.periscope.tv', 'www.pscp.tv',
 		periscope()
-
-	case 'vimeo.com', 'www.vimeo.com'
-		vimeo()
+	
+	case 'rumble.com', 'www.rumble.com'
+		rumble()
 
 	case 'twitch.tv', 'www.twitch.tv'
 		twitch()
-
+		
+	case 'vimeo.com', 'www.vimeo.com'
+		vimeo()
 endswitch
 
 #include "websites\aparat.au3"
 #include "websites\facebook.au3"
 #include "websites\periscope.au3"
+#include "websites\rumble.au3"
 #include "websites\twitch.au3"
 #include "websites\vimeo.au3"
 
